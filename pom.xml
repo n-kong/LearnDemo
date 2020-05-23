@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.nkong.LearnDemo</groupId>
+    <artifactId>LearnDemo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <!-- 在这里添加你的依赖 -->
+        <!--<dependency>
+            <groupId>ldapjdk</groupId>  &lt;!&ndash; 库名称，也可以自定义 &ndash;&gt;
+            <artifactId>ldapjdk</artifactId>    &lt;!&ndash;库名称，也可以自定义&ndash;&gt;
+            <version>1.0</version> &lt;!&ndash;版本号&ndash;&gt;
+            <scope>system</scope> &lt;!&ndash;作用域&ndash;&gt;
+            <systemPath>${basedir}\src\lib\ldapjdk.jar</systemPath> &lt;!&ndash;项目根目录下的lib文件夹下&ndash;&gt;
+        </dependency>-->
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+</project>
