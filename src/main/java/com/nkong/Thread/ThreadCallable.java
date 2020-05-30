@@ -29,6 +29,7 @@ public class ThreadCallable {
                     LOGGER.info("main start running...");
                     s = submit.get();
                     LOGGER.info("s is {}", s);
+                    executor.shutdown();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
