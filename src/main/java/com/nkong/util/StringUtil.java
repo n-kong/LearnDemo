@@ -1,6 +1,10 @@
 package com.nkong.util;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.text.DecimalFormat;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @Author: nkong
@@ -13,6 +17,7 @@ public class StringUtil {
         StringUtil util = new StringUtil();
         System.out.println(util.numFormat(11, 5));
         System.out.println(util.numAddOneFormat(20,"00000"));
+        System.out.println(util.replaceStr("aa\rbb\rcc\n"));
     }
 
     /**
@@ -35,6 +40,20 @@ public class StringUtil {
     public String numAddOneFormat(int inNum, String STR_FORMAT){
         DecimalFormat df = new DecimalFormat(STR_FORMAT);
         return df.format(++inNum);
+    }
+
+    /**
+     * 替换\r \t \n字符
+     * @param inStr 输入字符
+     * @return 替换后的字符
+     */
+    public String replaceStr(String inStr) {
+        if (StringUtils.isNoneEmpty(inStr)) {
+            Pattern p = Pattern.compile("\t|\r|\n");
+            Matcher m = p.matcher(inStr);
+            inStr = m.replaceAll("");
+        }
+        return inStr;
     }
 
 }
