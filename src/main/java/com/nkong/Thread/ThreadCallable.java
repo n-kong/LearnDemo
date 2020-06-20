@@ -21,7 +21,6 @@ public class ThreadCallable {
     public static void main(String[] args) {
         ExecutorService executor = Executors.newCachedThreadPool();
         Future<String> submit = executor.submit(new TaskFuture());
-
         new Thread(new Runnable() {
             @Override
             public void run() {
